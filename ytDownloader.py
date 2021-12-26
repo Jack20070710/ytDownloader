@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
 # 𝓜𝓪𝓭𝓮 𝓑𝔂 𝓧𝓾𝓪𝓷𝓜𝓲𝓷𝓰
-from pytube import YouTube
-import time
 import youtube_dl
-import pprint
+from pprint import pprint
 
 
 def get_video_info(youtube_url="https://www.youtube.com/watch?v=Jvkza7E4BVk"):
@@ -29,4 +27,4 @@ def get_video_info(youtube_url="https://www.youtube.com/watch?v=Jvkza7E4BVk"):
         video_info['網頁網址'] = info.get('webpage_url')
         video_info['上傳日期'] = info.get('upload_date')
     return video_info
-pprint.pprint(get_video_info())
+pprint(get_video_info())
